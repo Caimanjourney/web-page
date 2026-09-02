@@ -1,147 +1,416 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A simple, responsive page built with Tailwind CSS."
-    />
-    <title>Placeholder Company</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-slate-50 font-sans text-slate-900">
-    <header class="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-      <a class="text-lg font-bold tracking-tight" href="#top">Placeholder</a>
-      <a
-        class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-        href="#offer"
-      >
-        Get started
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Moirai Atelier offers personalised one-to-one Reiki and Theta Healing sessions." />
+  <title>Moirai Atelier | Reiki &amp; Theta Healing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Cormorant Garamond", "serif"],
+            header: ["Karla", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .testimonial-copy {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f4f1ea] font-sans text-[#4f5e4d]">
+  <header
+    class="absolute inset-x-0 top-0 z-10 mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-6 py-5 lg:py-8">
+    <a class="font-display text-3xl font-semibold tracking-tight text-[#f4f1ea]" href="#top">Moirai Atelier</a>
+    <nav aria-label="Primary navigation" class="order-3 w-full lg:absolute lg:left-1/2 lg:w-auto lg:-translate-x-1/2">
+      <ul
+        class="flex justify-center gap-5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f4f1ea]">
+        <li><a class="transition hover:text-[#c7a35e]" href="#about">About</a></li>
+        <li><a class="transition hover:text-[#c7a35e]" href="#sessions">Sessions</a></li>
+        <li><a class="transition hover:text-[#c7a35e]" href="#how-it-works">How it works</a></li>
+      </ul>
+    </nav>
+    <div class="order-4 flex w-full items-center justify-center gap-4 sm:order-none sm:ml-auto sm:w-auto sm:justify-end">
+      <ul aria-label="Social links" class="flex items-center gap-2">
+        <li>
+          <a aria-label="Follow Moirai Atelier on Instagram"
+            class="inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+            href="https://www.instagram.com/moirai.atelier" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+              <rect height="18" rx="5" width="18" x="3" y="3"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a aria-label="Follow Moirai Atelier on TikTok"
+            class="inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+            href="https://www.tiktok.com/@moirai.atelier" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M15 3v10.5a4.5 4.5 0 1 1-3.6-4.41"></path>
+              <path d="M15 3c1.1 2.4 2.8 3.8 5 4.2"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <span aria-hidden="true" class="hidden h-7 w-px bg-[#f4f1ea]/40 sm:block"></span>
+      <a class="rounded-full bg-[#4f5e4d] px-6 py-3 text-base font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2"
+        href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
+        target="_blank" rel="noopener noreferrer">
+        Book a free call
       </a>
-    </header>
+    </div>
+  </header>
 
-    <main id="top">
-      <section class="mx-auto max-w-5xl px-6 py-20 sm:py-28">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-            Placeholder category
-          </p>
-          <h1 class="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">
-            A clearer way to achieve your next big goal.
-          </h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            Placeholder Company helps people like you make meaningful progress with a simple, thoughtful approach.
-          </p>
-          <a
-            class="mt-8 inline-flex rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-            href="#offer"
-          >
-            Start with us
-          </a>
-        </div>
-      </section>
-
-      <section class="border-y border-slate-200 bg-white">
-        <div class="mx-auto grid max-w-5xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">The challenge</p>
-            <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-              The usual way can feel complicated and slow.
-            </h2>
+  <main id="top">
+    <section class="relative min-h-screen overflow-hidden bg-[#7e8d7a]">
+      <figure class="absolute inset-0">
+        <img class="absolute inset-0 h-full w-full object-cover" src="assets/Hero.png"
+          alt="Placeholder image of burning incense for Moirai Atelier" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#4f5e4d]/95 via-[#4f5e4d]/75 to-[#4f5e4d]/15"></div>
+        <figcaption
+          class="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-20 pt-52 text-[#f4f1ea] sm:pt-44">
+          <div class="max-w-2xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Re-center yourself</p>
+            <h1 class="mt-5 font-header text-4xl font-semibold leading-[0.94] tracking-tight sm:text-5xl lg:text-6xl">
+              Gain clarity and reconnect with yourself. Create the life you want.
+            </h1>
+            <p class="mt-7 max-w-xl text-lg leading-8 text-[#f4f1ea]">
+              Personalised one-to-one sessions for women seeking a calmer, more connected relationship with themselves.
+            </p>
+            <div class="mt-9 flex flex-wrap items-center gap-5">
+              <a class="rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-10 py-5 text-xl font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+                href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
+                target="_blank" rel="noopener noreferrer">
+                Book your free discovery call
+              </a>
+              <a class="font-semibold text-[#f4f1ea] underline decoration-[#c7a35e] underline-offset-4"
+                href="#sessions">
+                Explore the sessions
+              </a>
+            </div>
           </div>
-          <p class="text-lg leading-8 text-slate-600">
-            You have better things to do than wrestle with unclear steps, scattered information, and needless friction.
-            Placeholder Company brings everything into one calm, straightforward experience.
-          </p>
-        </div>
-      </section>
+        </figcaption>
+      </figure>
+    </section>
 
-      <section class="mx-auto max-w-5xl px-6 py-20">
-        <div class="max-w-2xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Why choose us</p>
-          <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            Built around the results that matter.
-          </h2>
+    <section id="offers" class="min-h-screen bg-[#d6cdba]">
+      <div class="mx-auto max-w-6xl px-6 py-20">
+        <div class="max-w-3xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">What I offer</p>
+          <h2 class="mt-4 font-header text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">Gentle support
+            for inner change.</h2>
+          <p class="mt-6 text-lg leading-8 text-[#4f5e4d]">I understand how difficult it can be to want change while
+            feeling unable to move forward—I have been there too. In a safe, compassionate space, we uncover what lies
+            beneath, release what feels heavy, and create room for more calm, clarity, and emotional freedom.</p>
         </div>
-        <div class="mt-12 grid gap-8 md:grid-cols-3">
-          <article class="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 class="text-lg font-semibold">Save valuable time</h3>
-            <p class="mt-3 leading-7 text-slate-600">
-              Placeholder text explaining how this benefit makes everyday work easier.
-            </p>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
+            <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
+              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="m12 2 1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2Z"></path>
+              </svg>
+            </span>
+            <h3 class="mt-5 font-header text-xl font-semibold">ThetaHealing® Practitioner</h3>
+            <p class="mt-3 leading-7 text-[#4f5e4d]">Uncover and gently shift patterns and emotional blocks that may be
+              holding you back.</p>
           </article>
-          <article class="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 class="text-lg font-semibold">Make confident progress</h3>
-            <p class="mt-3 leading-7 text-slate-600">
-              Placeholder text explaining the outcome customers can expect to achieve.
-            </p>
+          <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
+            <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
+              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
+                <path
+                  d="M12 20s-7-4.4-7-10.2C5 7.2 6.8 5.5 9 5.5c1.3 0 2.5.7 3 1.8.5-1.1 1.7-1.8 3-1.8 2.2 0 4 1.7 4 4.3C19 15.6 12 20 12 20Z">
+                </path>
+                <path d="M8 12h8"></path>
+              </svg>
+            </span>
+            <h3 class="mt-5 font-header text-xl font-semibold">Certified Reiki Practitioner</h3>
+            <p class="mt-3 leading-7 text-[#4f5e4d]">Support your energy balance, invite deep relaxation, and nurture
+              emotional and physical wellbeing.</p>
           </article>
-          <article class="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 class="text-lg font-semibold">Keep things simple</h3>
-            <p class="mt-3 leading-7 text-slate-600">
-              Placeholder text explaining why the experience feels clear from the start.
-            </p>
+          <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
+            <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
+              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
+                <path d="M4 8c3.5 0 4.5 2 8 2s4.5-2 8-2"></path>
+                <path d="M4 12c3.5 0 4.5 2 8 2s4.5-2 8-2"></path>
+                <path d="M4 16c3.5 0 4.5 2 8 2s4.5-2 8-2"></path>
+              </svg>
+            </span>
+            <h3 class="mt-5 font-header text-xl font-semibold">Guided Emotional-Release Sessions</h3>
+            <p class="mt-3 leading-7 text-[#4f5e4d]">Process emotions safely and privately, leaving you feeling lighter
+              within.</p>
+          </article>
+          <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
+            <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
+              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="3"></circle>
+                <path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path>
+                <path d="m18.5 5 .5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5.5-1.5Z"></path>
+              </svg>
+            </span>
+            <h3 class="mt-5 font-header text-xl font-semibold">1:1 Personalised Support</h3>
+            <p class="mt-3 leading-7 text-[#4f5e4d]">Each session is tailored to your needs, your pace, and what feels
+              right for you.</p>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="bg-slate-900 text-white">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-300">How it works</p>
-          <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Three simple steps.</h2>
-          <ol class="mt-12 grid gap-8 md:grid-cols-3">
-            <li>
-              <p class="text-sm font-semibold text-indigo-300">01</p>
-              <h3 class="mt-3 text-lg font-semibold">Start here</h3>
-              <p class="mt-3 leading-7 text-slate-300">Placeholder text for the first easy step.</p>
-            </li>
-            <li>
-              <p class="text-sm font-semibold text-indigo-300">02</p>
-              <h3 class="mt-3 text-lg font-semibold">Choose your path</h3>
-              <p class="mt-3 leading-7 text-slate-300">Placeholder text for the second easy step.</p>
-            </li>
-            <li>
-              <p class="text-sm font-semibold text-indigo-300">03</p>
-              <h3 class="mt-3 text-lg font-semibold">See the result</h3>
-              <p class="mt-3 leading-7 text-slate-300">Placeholder text for the final outcome.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
+    <section id="sessions" class="mx-auto grid max-w-6xl min-h-screen gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <figure class="relative min-h-[380px] overflow-hidden rounded-[3rem] bg-[#7e8d7a]">
+        <img class="absolute inset-0 h-full w-full object-cover"
+          src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+          alt="Placeholder botanical image for the sessions section" />
+      </figure>
+      <div class="max-w-xl lg:pl-8">
+        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Sessions</p>
+        <h2 class="mt-4 font-header text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">A personalised
+          space for you.</h2>
+        <p class="mt-6 text-lg leading-8 text-[#4f5e4d]">
+          Moirai Atelier offers one-to-one Reiki and Theta Healing sessions, held primarily online. Each paid session
+          lasts 60–90 minutes, with limited in-person availability.
+        </p>
+        <p class="mt-5 text-lg leading-8 text-[#4f5e4d]">Together, we create a calm space to explore what no longer
+          serves you and what you want to move towards.</p>
+        <a class="mt-7 inline-flex font-semibold text-[#4f5e4d] underline decoration-[#c7a35e] underline-offset-4"
+          href="#discovery-call">
+          Start with a free discovery call
+        </a>
+      </div>
+    </section>
 
-      <section class="mx-auto max-w-5xl px-6 py-20">
-        <div class="max-w-2xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">What people say</p>
-          <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            Placeholder proof that makes a difference.
-          </h2>
-        </div>
-        <figure class="mt-10 max-w-3xl rounded-xl border border-slate-200 bg-white p-8">
-          <blockquote class="text-xl leading-8 text-slate-700">
-            “Placeholder testimonial text describing a positive experience and a meaningful result.”
-          </blockquote>
-          <figcaption class="mt-5 font-semibold text-slate-900">Placeholder Name, Placeholder Role</figcaption>
+    <section id="about" class="min-h-screen bg-[#4f5e4d] text-[#f4f1ea] flex items-center">
+      <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+        <figure
+          class="mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-full border-[12px] border-[#d6cdba] bg-[#7e8d7a]">
+          <img class="h-full w-full object-cover" src="assets/profile.png"
+            alt="Portrait of the Moirai Atelier practitioner" />
         </figure>
-      </section>
-
-      <section id="offer" class="border-t border-slate-200 bg-white">
-        <div class="mx-auto max-w-5xl px-6 py-20 text-center">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Ready when you are</p>
-          <h2 class="mx-auto mt-4 max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
-            Take the next step with Placeholder Company.
-          </h2>
-          <p class="mx-auto mt-5 max-w-xl text-lg leading-8 text-slate-600">
-            Placeholder text that restates the value and makes the next action feel clear and easy.
-          </p>
-          <a
-            class="mt-8 inline-flex rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-            href="#top"
-          >
-            Get started
-          </a>
+        <div class="max-w-xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">About Carol Moura</p>
+          <h2 class="mt-4 font-header text-4xl font-semibold leading-tight sm:text-5xl">Healing, guided by intuition and
+            care.</h2>
+          <div class="mt-6 space-y-5 text-lg leading-8 text-[#f4f1ea]">
+            <p>I’m Caroline, an energy healer and intuitive practitioner committed to creating a grounded, welcoming
+              space where you can pause, reconnect with yourself and restore a greater sense of balance. My approach is
+              compassionate, attentive and guided by the understanding that every person’s experience is unique.</p>
+            <p>I work with practices including Reiki, ThetaHealing® and sound healing, sometimes supported by crystals,
+              a pendulum or other energetic tools. However, the heart of my work is not the tools themselves, but
+              presence, intention and the ability to listen deeply to what you need in that moment. Together, we
+              identify and release the energetic and emotional blocks that may be preventing you from living a lighter,
+              more fulfilling life. My purpose is to support you in reconnecting with your inner wisdom, clarity and
+              personal power.</p>
+          </div>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="min-h-screen mx-auto max-w-6xl px-6 py-20 flex flex-col items-start justify-center">
+      <div class="max-w-2xl">
+        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">How it works</p>
+        <h2 class="mt-4 font-header text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">Your first step can
+          be simple.</h2>
+      </div>
+      <ol class="mt-12 grid gap-8 md:grid-cols-3">
+        <li class="border-t-2 border-[#d6cdba] pt-5">
+          <p class="font-header text-4xl font-semibold text-[#c7a35e]">01</p>
+          <h3 class="mt-4 font-header text-lg font-semibold">Begin with a free discovery call</h3>
+          <p class="mt-3 leading-7 text-[#4f5e4d]">Book a complimentary 30-minute online call to share what brings you
+            here and ask your questions.</p>
+        </li>
+        <li class="border-t-2 border-[#d6cdba] pt-5">
+          <p class="font-header text-4xl font-semibold text-[#c7a35e]">02</p>
+          <h3 class="mt-4 font-header text-lg font-semibold">Book your individual session</h3>
+          <p class="mt-3 leading-7 text-[#4f5e4d]">If it feels like a good fit, you can book a personalised 60–90-minute
+            Reiki and Theta Healing session.</p>
+        </li>
+        <li class="border-t-2 border-[#d6cdba] pt-5">
+          <p class="font-header text-4xl font-semibold text-[#c7a35e]">03</p>
+          <h3 class="mt-4 font-header text-lg font-semibold">Move forward with clarity</h3>
+          <p class="mt-3 leading-7 text-[#4f5e4d]">Leave with space to reflect, reconnect, and take your next step in a
+            way that feels true to you.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="testimonials" class="h-96 overflow-hidden py-8">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div class="max-w-2xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Kind words</p>
+            <h2 class="mt-1 font-header text-2xl font-semibold leading-tight text-[#4f5e4d] sm:text-3xl">What clients share.</h2>
+          </div>
+          <p class="text-sm text-[#4f5e4d]">A few client stories</p>
+        </div>
+      </div>
+      <div data-autoplay-carousel data-carousel-container class="relative mt-6 overflow-hidden">
+        <div data-carousel aria-label="Client testimonials"
+          class="flex h-48 gap-5 overflow-x-hidden pl-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <article
+            class="h-48 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-5 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
+            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
+              “Carol is so authentic and very attentive to your needs and is very skilled at what she does. I've done
+              theta sessions with her and she has helped me at a deeper level. Very powerful work.”
+            </blockquote>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Veronika</p>
+          </article>
+          <article
+            class="h-48 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-5 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
+            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
+              “I have been going through very challenging situations that caused me several symptoms and, above all,
+              great exhaustion, with a lot of difficulty regulating rest and recovery. During my session with Carol, I
+              still felt some resistance to surrendering to the process; however, after the session and in the following
+              days, I have felt calmer and able to rest better. It has been helping my recovery. Thank you :)”
+            </blockquote>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Sandra D.</p>
+          </article>
+          <article
+            class="h-48 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-5 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
+            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
+              “The experience was emotional. It was incredible to feel the energy flowing, the warmth in different
+              points, and the release of stress. The session released a lot of negativity that had built up and brought
+              a wonderful feeling of peace and relief. Thank you, Carol.”
+            </blockquote>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Rachel K.</p>
+          </article>
+          <article
+            class="h-48 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-5 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
+            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
+              “Carol is someone who deeply understands what she does. Before the session, I felt tired, anxious, and
+              overwhelmed, and during the Reiki session with her I experienced something very intense. I was able to
+              visualise many things, as if I were on a true inner journey. It was a unique experience of deep connection
+              and renewal. I left feeling lighter, at peace, and with renewed energy. I am sure that without the Reiki I
+              received with her, my healing process would have taken much longer. I am deeply grateful for everything I
+              experienced and wholeheartedly recommend her work.”
+            </blockquote>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Carla</p>
+          </article>
+          <article
+            class="h-48 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-5 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
+            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
+              “Always record your sessions. Hahaha! I want to thank you for the welcome, care, and attention, especially
+              because I did not understand much about the subject and did not know exactly what to expect. Carol was
+              attentive and thorough, and made me feel comfortable sharing my story in a safe space. I put my fears
+              aside, saw wonderful results from the first session, and now, in addition to sleeping better, my focus and
+              concentration have changed exponentially. I have only gratitude and wish you every success.”
+            </blockquote>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Nathálie A.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="discovery-call" class="min-h-screen mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <div class="relative overflow-hidden rounded-[3rem] bg-[#7e8d7a] px-6 py-16 text-center sm:px-12">
+        <div class="relative mx-auto max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Ready when you are</p>
+          <h2 class="mt-4 font-header text-5xl font-semibold leading-tight text-[#f4f1ea]">Begin with a calm
+            conversation.</h2>
+          <p class="mx-auto mt-5 max-w-xl text-lg leading-8 text-[#f4f1ea]">
+            Book a free 30-minute discovery call to learn more, ask your questions, and see whether Moirai Atelier is
+            right for you.
+          </p>
+          <a class="mt-8 inline-flex rounded-full bg-[#4f5e4d] px-10 py-5 text-xl font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2"
+            href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
+            target="_blank" rel="noopener noreferrer">
+            Book your free discovery call
+          </a>
+          <p class="mt-4 text-sm text-[#f4f1ea]">No obligation—just a calm conversation to explore what you need.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelectorAll("[data-carousel-container]").forEach((container) => {
+      const rail = container.querySelector("[data-carousel]");
+
+      container.querySelectorAll("[data-carousel-control]").forEach((control) => {
+        control.addEventListener("click", () => {
+          const direction = control.dataset.carouselControl === "next" ? 1 : -1;
+          rail.scrollBy({ left: rail.clientWidth * 0.9 * direction, behavior: "smooth" });
+        });
+      });
+    });
+
+    document.querySelectorAll("[data-autoplay-carousel]").forEach((container) => {
+      const rail = container.querySelector("[data-carousel]");
+      const cards = Array.from(rail.children);
+
+      if (cards.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      cards.forEach((card) => {
+        const duplicate = card.cloneNode(true);
+        duplicate.setAttribute("aria-hidden", "true");
+        rail.appendChild(duplicate);
+      });
+
+      const firstDuplicate = rail.children[cards.length];
+      let loopWidth = 0;
+      let isPaused = false;
+
+      const measureLoop = () => {
+        loopWidth = firstDuplicate.offsetLeft - cards[0].offsetLeft;
+      };
+
+      const pause = () => {
+        isPaused = true;
+      };
+
+      const resume = () => {
+        isPaused = false;
+      };
+
+      container.addEventListener("mouseenter", pause);
+      container.addEventListener("mouseleave", resume);
+      container.addEventListener("focusin", pause);
+      container.addEventListener("focusout", () => {
+        requestAnimationFrame(() => {
+          if (!container.contains(document.activeElement)) resume();
+        });
+      });
+      window.addEventListener("resize", measureLoop);
+
+      requestAnimationFrame(() => {
+        measureLoop();
+
+        window.setInterval(() => {
+          if (isPaused || !loopWidth) return;
+
+          rail.scrollLeft += 2;
+
+          if (rail.scrollLeft >= loopWidth) rail.scrollLeft -= loopWidth;
+        }, 80);
+      });
+    });
+  </script>
+</body>
+
 </html>
