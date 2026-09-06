@@ -17,8 +17,8 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ["Cormorant Garamond", "serif"],
-            header: ["Karla", "sans-serif"],
+            sans: ["Karla", "sans-serif"],
+            header: ["Cormorant Garamond", "serif"],
             display: ["Playfair Display", "serif"],
           },
         },
@@ -36,24 +36,23 @@
 </head>
 
 <body class="bg-[#f4f1ea] font-sans text-[#4f5e4d]">
-  <header
-    class="absolute inset-x-0 top-0 z-30 mx-auto flex max-w-6xl items-center px-6 py-5 lg:py-8">
-    <a class="font-display text-3xl font-semibold tracking-tight text-[#f4f1ea]" href="#top">Moirai Atelier</a>
+  <header class="absolute inset-x-0 top-0 z-30 mx-auto flex max-w-6xl items-center px-6 py-5 lg:py-8 h-28">
+    <a class="text-white xs:text-slate-600 sm:text-blue-600 md:text-orange-600 lg:text-green-600 xl:text-[#f4f1ea] font-display text-3xl font-semibold tracking-tight "
+      href="#top">Moirai Atelier</a>
     <button id="mobile-menu-toggle" type="button"
       class="ml-auto inline-flex size-11 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d] lg:hidden"
       aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
-      <svg data-menu-icon="open" aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-linecap="round"
-        stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+      <svg data-menu-icon="open" aria-hidden="true" class="size-5" fill="none" stroke="currentColor"
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
         <path d="M4 7h16M4 12h16M4 17h16"></path>
       </svg>
-      <svg data-menu-icon="close" aria-hidden="true" class="hidden size-5" fill="none" stroke="currentColor" stroke-linecap="round"
-        stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+      <svg data-menu-icon="close" aria-hidden="true" class="hidden size-5" fill="none" stroke="currentColor"
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
         <path d="m6 6 12 12M18 6 6 18"></path>
       </svg>
     </button>
     <nav aria-label="Primary navigation" class="hidden lg:absolute lg:left-1/2 lg:block lg:w-auto lg:-translate-x-1/2">
-      <ul
-        class="flex justify-center gap-5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f4f1ea]">
+      <ul class="flex justify-center gap-5 text-base font-semibold uppercase tracking-[0.14em] text-[#f4f1ea]">
         <li><a class="transition hover:text-[#c7a35e]" href="#about">About</a></li>
         <li><a class="transition hover:text-[#c7a35e]" href="#sessions">Sessions</a></li>
         <li><a class="transition hover:text-[#c7a35e]" href="#how-it-works">How it works</a></li>
@@ -65,7 +64,8 @@
           <a aria-label="Follow Moirai Atelier on Instagram"
             class="inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
             href="https://www.instagram.com/moirai.atelier" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+            <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
               <rect height="18" rx="5" width="18" x="3" y="3"></rect>
               <circle cx="12" cy="12" r="4"></circle>
               <circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"></circle>
@@ -76,7 +76,8 @@
           <a aria-label="Follow Moirai Atelier on TikTok"
             class="inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
             href="https://www.tiktok.com/@moirai.atelier" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+            <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M15 3v10.5a4.5 4.5 0 1 1-3.6-4.41"></path>
               <path d="M15 3c1.1 2.4 2.8 3.8 5 4.2"></path>
             </svg>
@@ -95,7 +96,8 @@
   <div id="mobile-menu" class="fixed inset-0 z-20 hidden bg-[#4f5e4d] text-[#f4f1ea] lg:hidden">
     <div class="flex min-h-full flex-col px-6 pb-8 pt-28">
       <nav aria-label="Mobile navigation">
-        <ul class="space-y-7 text-center font-header text-2xl font-semibold">
+        <hr class="text-white bg-white/20 border b-2 border-white/20 max-w-[60px] mb-8 " />
+        <ul class="space-y-7 text-left text-base font-semibold uppercase tracking-[0.14em] text-[#f4f1ea]">
           <li><a class="transition hover:text-[#c7a35e]" href="#about">About</a></li>
           <li><a class="transition hover:text-[#c7a35e]" href="#sessions">Sessions</a></li>
           <li><a class="transition hover:text-[#c7a35e]" href="#how-it-works">How it works</a></li>
@@ -104,13 +106,14 @@
       <div class="mt-auto flex flex-col items-center">
         <a class="inline-flex rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-8 py-4 text-lg font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
           href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
-          target="_blank" rel="noopener noreferrer">Book a free call</a>
+          target="_blank" rel="noopener noreferrer">Book a free discovery call</a>
         <ul aria-label="Social links" class="mt-8 flex items-center gap-4">
           <li>
             <a aria-label="Follow Moirai Atelier on Instagram"
               class="inline-flex size-11 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
               href="https://www.instagram.com/moirai.atelier" target="_blank" rel="noopener noreferrer">
-              <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+              <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
                 <rect height="18" rx="5" width="18" x="3" y="3"></rect>
                 <circle cx="12" cy="12" r="4"></circle>
                 <circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"></circle>
@@ -121,7 +124,8 @@
             <a aria-label="Follow Moirai Atelier on TikTok"
               class="inline-flex size-11 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
               href="https://www.tiktok.com/@moirai.atelier" target="_blank" rel="noopener noreferrer">
-              <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+              <svg aria-hidden="true" class="size-5" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
                 <path d="M15 3v10.5a4.5 4.5 0 1 1-3.6-4.41"></path>
                 <path d="M15 3c1.1 2.4 2.8 3.8 5 4.2"></path>
               </svg>
@@ -139,22 +143,23 @@
           alt="Placeholder image of burning incense for Moirai Atelier" />
         <div class="absolute inset-0 bg-gradient-to-r from-[#4f5e4d]/95 via-[#4f5e4d]/75 to-[#4f5e4d]/15"></div>
         <figcaption
-          class="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-20 pt-52 text-[#f4f1ea] sm:pt-44">
-          <div class="max-w-2xl">
+          class=" relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center items-start px-6 pt-0 xl:pt-28 text-[#f4f1ea]">
+          <div class="max-w-3xl">
             <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Re-center yourself</p>
-            <h1 class="mt-5 font-header text-4xl font-semibold leading-[0.94] tracking-tight sm:text-5xl lg:text-6xl">
-              Release what feels heavy. Reconnect with yourself.
+            <h1 class="mt-4 font-header text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+              Release what feels heavy.
             </h1>
-            <p class="mt-7 max-w-xl text-lg leading-8 text-[#f4f1ea]">
-              Gentle energy healing for those feeling stuck, overwhelmed or carrying stress that is affecting their emotional and physical well-being—supporting greater calm, balance and ease.
+            <p class="mt-6 max-w-xl text-lg leading-8 text-[#f4f1ea]">
+              Gentle energy healing for those feeling stuck, overwhelmed or carrying stress that is affecting their
+              emotional and physical well-being—supporting greater calm, balance and ease.
             </p>
-            <div class="mt-9 flex flex-wrap items-center gap-5">
-              <a class="rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-10 py-5 text-xl font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+            <div class="mt-9 flex flex-wrap items-center justify-center lg:justify-start gap-5">
+              <a class="lg:w-fit w-full text-center rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-6 py-4 text-xl font-header font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
                 href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
                 target="_blank" rel="noopener noreferrer">
-                Book your free discovery call
+                Book a free discovery call
               </a>
-              <a class="font-semibold text-[#f4f1ea] underline decoration-[#c7a35e] underline-offset-4"
+              <a class="font-semibold hidden text-[#f4f1ea] underline decoration-[#c7a35e] underline-offset-4"
                 href="#sessions">
                 Explore the sessions
               </a>
@@ -167,20 +172,23 @@
     <section id="offers" class="min-h-screen bg-[#d6cdba]">
       <div class="mx-auto max-w-6xl px-6 py-20">
         <div class="max-w-3xl">
-          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#4f5e4d]">What I offer</p>
-          <h2 class="mt-4 font-header text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">Support
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[#4f5e4d]">What I offer</p>
+          <h2 class="mt-4 font-header  text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">Support
             for inner change.</h2>
-          <p class="mt-6 text-lg leading-8 text-[#4f5e4d]">I understand how difficult it can be to want change while
+          <p class="mt-6 text-base leading-8 text-[#4f5e4d]">I understand how difficult it can be to want change while
             feeling unable to move forward—I have been there too. In a safe, compassionate space, we uncover what lies
             beneath, release what feels heavy, and create room for more calm, clarity, and emotional freedom.</p>
         </div>
         <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
             <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
-              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="m12 2 1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2Z"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#4f5e4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-sprout">
+                <path
+                  d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" />
+                <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" />
+                <path d="M5 21h14" />
               </svg>
             </span>
             <h3 class="mt-5 font-header text-xl font-semibold">ThetaHealing® Practitioner</h3>
@@ -189,12 +197,11 @@
           </article>
           <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
             <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
-              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#4f5e4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-heart-handshake">
                 <path
-                  d="M12 20s-7-4.4-7-10.2C5 7.2 6.8 5.5 9 5.5c1.3 0 2.5.7 3 1.8.5-1.1 1.7-1.8 3-1.8 2.2 0 4 1.7 4 4.3C19 15.6 12 20 12 20Z">
-                </path>
-                <path d="M8 12h8"></path>
+                  d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" />
               </svg>
             </span>
             <h3 class="mt-5 font-header text-xl font-semibold">Certified Reiki Practitioner</h3>
@@ -203,11 +210,12 @@
           </article>
           <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
             <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
-              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
-                <path d="M4 8c3.5 0 4.5 2 8 2s4.5-2 8-2"></path>
-                <path d="M4 12c3.5 0 4.5 2 8 2s4.5-2 8-2"></path>
-                <path d="M4 16c3.5 0 4.5 2 8 2s4.5-2 8-2"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#4f5e4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-waves-horizontal">
+                <path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" />
+                <path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" />
+                <path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" />
               </svg>
             </span>
             <h3 class="mt-5 font-header text-xl font-semibold">Guided Emotional-Release Sessions</h3>
@@ -216,11 +224,13 @@
           </article>
           <article class="rounded-[2rem] bg-[#f4f1ea] p-7">
             <span class="inline-flex size-12 items-center justify-center rounded-full bg-[#d6cdba] text-[#4f5e4d]">
-              <svg aria-hidden="true" class="size-6" fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="3"></circle>
-                <path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path>
-                <path d="m18.5 5 .5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5.5-1.5Z"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#4f5e4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-users">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <circle cx="9" cy="7" r="4" />
               </svg>
             </span>
             <h3 class="mt-5 font-header text-xl font-semibold">1:1 Personalised Support</h3>
@@ -231,10 +241,10 @@
       </div>
     </section>
 
-    <section id="sessions" class="mx-auto grid max-w-6xl min-h-screen gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section id="sessions"
+      class="mx-auto grid max-w-6xl min-h-screen gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
       <figure class="relative aspect-square w-full overflow-hidden rounded-[3rem] bg-[#7e8d7a] lg:order-2">
-        <img class="absolute inset-0 h-full w-full object-cover"
-          src="assets/Session.webp"
+        <img class="absolute inset-0 h-full w-full object-cover" src="assets/Session.webp"
           alt="Reiki practitioner providing an in-person energy healing session" />
       </figure>
       <div class="max-w-xl lg:order-1 lg:pr-8">
@@ -242,14 +252,23 @@
         <h2 class="mt-4 font-header text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">A personalised
           space for you.</h2>
         <div class="mt-6 space-y-5 text-lg leading-8 text-[#4f5e4d]">
-          <p>Each 60–90-minute session is personalized around what you are experiencing. Most sessions are held online via Zoom or Google Meet, with in-person appointments available in Setúbal, Portugal.</p>
-          <p>After a gentle conversation about your needs, I combine Reiki, ThetaHealing® practices, intuitive guidance and a channeled meditation as appropriate. We close with reflections and integration guidance, and you are welcome to return whenever you need support—there is no set programme.</p>
+          <p>Each 60–90-minute session is personalized around what you are experiencing. Most sessions are held online
+            via Zoom or Google Meet, with in-person appointments available in Setúbal, Portugal.</p>
+          <p>After a gentle conversation about your needs, I combine Reiki, ThetaHealing® practices, intuitive guidance
+            and a channeled meditation as appropriate. We close with reflections and integration guidance, and you are
+            welcome to return whenever you need support—there is no set programme.</p>
         </div>
-        <a class="mt-7 inline-flex font-semibold text-[#4f5e4d] underline decoration-[#c7a35e] underline-offset-4"
+        <a class="hidden mt-7 inline-flex font-semibold text-[#4f5e4d] underline decoration-[#c7a35e] underline-offset-4"
           href="#discovery-call">
           Start with a free discovery call
         </a>
+
       </div>
+      <a class="lg:w-fit w-full text-center rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-6 py-4 text-xl font-header font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+        href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
+        target="_blank" rel="noopener noreferrer">
+        Book a free discovery call
+      </a>
     </section>
 
     <section id="about" class="min-h-screen bg-[#4f5e4d] text-[#f4f1ea] flex items-center">
@@ -275,7 +294,8 @@
       </div>
     </section>
 
-    <section id="how-it-works" class="min-h-screen mx-auto max-w-6xl px-6 py-20 flex flex-col items-start justify-center">
+    <section id="how-it-works"
+      class="min-h-screen mx-auto max-w-6xl px-6 py-20 flex flex-col items-start justify-center">
       <div class="max-w-2xl">
         <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">How it works</p>
         <h2 class="mt-4 font-header text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">Your first step can
@@ -285,31 +305,34 @@
         <li class="border-t-2 border-[#d6cdba] pt-5">
           <p class="font-header text-4xl font-semibold text-[#c7a35e]">01</p>
           <h3 class="mt-4 font-header text-lg font-semibold">Begin with a Free Discovery Call</h3>
-          <p class="mt-3 leading-7 text-[#4f5e4d]">Book a complimentary 30-minute online conversation to share what brings you here, ask questions and explore whether my approach feels right for you—with no obligation.</p>
+          <p class="mt-3 leading-7 text-[#4f5e4d]">Book a complimentary 30-minute online conversation to share what
+            brings you here, ask questions and explore whether my approach feels right for you—with no obligation.</p>
         </li>
         <li class="border-t-2 border-[#d6cdba] pt-5">
           <p class="font-header text-4xl font-semibold text-[#c7a35e]">02</p>
           <h3 class="mt-4 font-header text-lg font-semibold">Experience a Personalized Session</h3>
-          <p class="mt-3 leading-7 text-[#4f5e4d]">During your 60–90-minute session, we explore your needs using guided meditation, energy healing and intuitive guidance to identify blocks and release what feels heavy.</p>
+          <p class="mt-3 leading-7 text-[#4f5e4d]">During your 60–90-minute session, we explore your needs using guided
+            meditation, energy healing and intuitive guidance to identify blocks and release what feels heavy.</p>
         </li>
         <li class="border-t-2 border-[#d6cdba] pt-5">
           <p class="font-header text-4xl font-semibold text-[#c7a35e]">03</p>
           <h3 class="mt-4 font-header text-lg font-semibold">Integrate at Your Own Pace</h3>
-          <p class="mt-3 leading-7 text-[#4f5e4d]">Receive reflections and gentle guidance to support you after the session. Notice what unfolds at your own pace, with the freedom to return whenever you feel ready.</p>
+          <p class="mt-3 leading-7 text-[#4f5e4d]">Receive reflections and gentle guidance to support you after the
+            session. Notice what unfolds at your own pace, with the freedom to return whenever you feel ready.</p>
         </li>
       </ol>
     </section>
 
-    <section id="testimonials" class="h-[27rem] overflow-hidden py-8">
-      <div class="mx-auto max-w-6xl px-6">
-        <div class="flex flex-wrap items-end justify-between gap-4">
-          <div class="max-w-2xl">
-            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Kind words</p>
-            <h2 class="mt-1 font-header text-2xl font-semibold leading-tight text-[#4f5e4d] sm:text-3xl">What clients share.</h2>
-          </div>
-          <p class="text-sm text-[#4f5e4d]">A few client stories</p>
-        </div>
+    <section id="testimonials" class="overflow-hidden py-32 bg-[#4f5e4d] text-[#f4f1ea]">
+      <div class="mx-auto max-w-6xl px-6 ">
+        <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Kind words</p>
+        <h2 class="mt-4 font-header  text-4xl font-semibold leading-tight sm:text-5xl">What clients
+              share.</h2>
+        <p class="mt-6 text-base leading-8 text-[#4f5e4d] hidden">A few client stories</p>
       </div>
+      </div>
+      
       <div data-autoplay-carousel data-carousel-container class="relative mt-6 overflow-hidden">
         <div data-carousel aria-label="Client testimonials"
           class="flex h-72 gap-5 overflow-x-hidden pl-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -396,7 +419,8 @@
     <div class="mx-auto max-w-6xl px-6 py-14">
       <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr] lg:gap-16">
         <div class="max-w-sm">
-          <a class="font-display text-3xl font-semibold tracking-tight transition hover:text-[#c7a35e]" href="#top">Moirai Atelier</a>
+          <a class="font-display text-3xl font-semibold tracking-tight transition hover:text-[#c7a35e]"
+            href="#top">Moirai Atelier</a>
           <p class="mt-4 max-w-xs text-lg leading-7 text-[#f4f1ea]/85">Release your blocks. Rescue your essence.</p>
         </div>
         <nav aria-label="Footer navigation">
@@ -409,13 +433,15 @@
         </nav>
         <div>
           <p class="font-header text-xs font-semibold uppercase tracking-[0.18em] text-[#c7a35e]">Begin here</p>
-          <p class="mt-4 max-w-xs text-lg leading-7 text-[#f4f1ea]/85">Start with a calm, complimentary conversation about what you need.</p>
+          <p class="mt-4 max-w-xs text-lg leading-7 text-[#f4f1ea]/85">Start with a calm, complimentary conversation
+            about what you need.</p>
           <a class="mt-5 inline-flex rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-5 py-2.5 font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
             href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
             target="_blank" rel="noopener noreferrer">Book a free discovery call</a>
         </div>
       </div>
-      <div class="mt-12 flex flex-col gap-3 border-t border-[#f4f1ea]/20 pt-6 text-sm text-[#f4f1ea]/70 sm:flex-row sm:items-center sm:justify-between">
+      <div
+        class="mt-12 flex flex-col gap-3 border-t border-[#f4f1ea]/20 pt-6 text-sm text-[#f4f1ea]/70 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Moirai Atelier. All rights reserved.</p>
         <a class="transition hover:text-[#c7a35e]" href="#top">Back to top ↑</a>
       </div>
