@@ -12,6 +12,10 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>-->
+  <script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js"></script>
+  <script src="https://unpkg.com/embla-carousel-auto-scroll@8.6.0/embla-carousel-auto-scroll.umd.js"></script>
+  <script src="https://unpkg.com/embla-carousel-fade@8.6.0/embla-carousel-fade.umd.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -30,15 +34,46 @@
       display: -webkit-box;
       overflow: hidden;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 12;
+    }
+
+    .embla__viewport {
+      overflow: hidden;
+    }
+
+    .embla__container {
+      display: flex;
+      gap: 2.25rem;
+      touch-action: pan-y pinch-zoom;
+    }
+
+    .embla__slide:last-child {
+      margin-right: 2.25rem;
+    }
+
+    .embla__slide {
+      min-width: 0;
+      flex: 0 0 82vw;
+    }
+
+
+    @media (min-width: 640px) {
+      .embla__slide {
+        flex-basis: calc((100% - 2.25rem) / 2);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .embla__slide {
+        flex-basis: calc((100% - 2.5rem) / 3);
+      }
     }
   </style>
 </head>
 
 <body class="bg-[#f4f1ea] font-sans text-[#4f5e4d]">
   <header class="absolute inset-x-0 top-0 z-30 mx-auto flex max-w-6xl items-center px-6 py-5 lg:py-8 h-28">
-    <a class="text-white xs:text-slate-600 sm:text-blue-600 md:text-orange-600 lg:text-green-600 xl:text-[#f4f1ea] font-display text-3xl font-semibold tracking-tight "
-      href="#top">Moirai Atelier</a>
+    <a class="text-[#f4f1ea] font-display text-3xl font-semibold tracking-tight " href="#top">Moirai</a>
     <button id="mobile-menu-toggle" type="button"
       class="ml-auto inline-flex size-11 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d] lg:hidden"
       aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
@@ -242,33 +277,30 @@
     </section>
 
     <section id="sessions"
-      class="mx-auto grid max-w-6xl min-h-screen gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      class="mx-auto grid max-w-6xl min-h-screen gap-10 px-6 py-20 lg:grid-cols-2 lg:items-center">
       <figure class="relative aspect-square w-full overflow-hidden rounded-[3rem] bg-[#7e8d7a] lg:order-2">
         <img class="absolute inset-0 h-full w-full object-cover" src="assets/Session.webp"
           alt="Reiki practitioner providing an in-person energy healing session" />
       </figure>
-      <div class="max-w-xl lg:order-1 lg:pr-8">
+      <div class="w-full lg:max-w-xl lg:order-1 lg:pr-8">
         <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Sessions</p>
         <h2 class="mt-4 font-header text-4xl font-semibold leading-tight text-[#4f5e4d] sm:text-5xl">A personalised
           space for you.</h2>
-        <div class="mt-6 space-y-5 text-lg leading-8 text-[#4f5e4d]">
+        <div class="mt-6 space-y-5 text-lg leading-8 text-[#4f5e4d] mb-6">
           <p>Each 60–90-minute session is personalized around what you are experiencing. Most sessions are held online
             via Zoom or Google Meet, with in-person appointments available in Setúbal, Portugal.</p>
           <p>After a gentle conversation about your needs, I combine Reiki, ThetaHealing® practices, intuitive guidance
             and a channeled meditation as appropriate. We close with reflections and integration guidance, and you are
             welcome to return whenever you need support—there is no set programme.</p>
         </div>
-        <a class="hidden mt-7 inline-flex font-semibold text-[#4f5e4d] underline decoration-[#c7a35e] underline-offset-4"
-          href="#discovery-call">
-          Start with a free discovery call
-        </a>
 
+         <a class="block w-full rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-6 py-4 text-center font-header text-xl font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d] lg:w-fit"
+   href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
+            target="_blank" rel="noopener noreferrer">
+            Book a free discovery call
+          </a>
       </div>
-      <a class="lg:w-fit w-full text-center rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-6 py-4 text-xl font-header font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
-        href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
-        target="_blank" rel="noopener noreferrer">
-        Book a free discovery call
-      </a>
+
     </section>
 
     <section id="about" class="min-h-screen bg-[#4f5e4d] text-[#f4f1ea] flex items-center">
@@ -324,98 +356,136 @@
     </section>
 
     <section id="testimonials" class="overflow-hidden py-32 bg-[#4f5e4d] text-[#f4f1ea]">
-      <div class="mx-auto max-w-6xl px-6 ">
+      <div class="mx-auto max-w-6xl px-6 pb-6 ">
         <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Kind words</p>
-        <h2 class="mt-4 font-header  text-4xl font-semibold leading-tight sm:text-5xl">What clients
-              share.</h2>
-        <p class="mt-6 text-base leading-8 text-[#4f5e4d] hidden">A few client stories</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Kind words</p>
+          <h2 class="mt-4 font-header  text-4xl font-semibold leading-tight sm:text-5xl">What clients
+            share.</h2>
+          <p class="mt-6 text-base leading-8 text-[#4f5e4d] hidden">A few client stories</p>
+        </div>
       </div>
-      </div>
-      
-      <div data-autoplay-carousel data-carousel-container class="relative mt-6 overflow-hidden">
-        <div data-carousel aria-label="Client testimonials"
-          class="flex h-72 gap-5 overflow-x-hidden pl-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <article
-            class="h-72 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-6 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
-            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
-            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
-              “Carol is so authentic and very attentive to your needs and is very skilled at what she does. I've done
-              theta sessions with her and she has helped me at a deeper level. Very powerful work.”
-            </blockquote>
-            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Veronika</p>
-          </article>
-          <article
-            class="h-72 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-6 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
-            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
-            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
-              “I have been going through very challenging situations that caused me several symptoms and, above all,
-              great exhaustion, with a lot of difficulty regulating rest and recovery. During my session with Carol, I
-              still felt some resistance to surrendering to the process; however, after the session and in the following
-              days, I have felt calmer and able to rest better. It has been helping my recovery. Thank you :)”
-            </blockquote>
-            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Sandra D.</p>
-          </article>
-          <article
-            class="h-72 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-6 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
-            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
-            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
-              “The experience was emotional. It was incredible to feel the energy flowing, the warmth in different
-              points, and the release of stress. The session released a lot of negativity that had built up and brought
-              a wonderful feeling of peace and relief. Thank you, Carol.”
-            </blockquote>
-            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Rachel K.</p>
-          </article>
-          <article
-            class="h-72 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-6 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
-            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
-            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
-              “Carol is someone who deeply understands what she does. Before the session, I felt tired, anxious, and
-              overwhelmed, and during the Reiki session with her I experienced something very intense. I was able to
-              visualise many things, as if I were on a true inner journey. It was a unique experience of deep connection
-              and renewal. I left feeling lighter, at peace, and with renewed energy. I am sure that without the Reiki I
-              received with her, my healing process would have taken much longer. I am deeply grateful for everything I
-              experienced and wholeheartedly recommend her work.”
-            </blockquote>
-            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Carla</p>
-          </article>
-          <article
-            class="h-72 w-[82vw] shrink-0 rounded-[2rem] bg-[#d6cdba] p-6 sm:w-[calc((100%_-_1.25rem)/2)] lg:w-[calc((100%_-_2.5rem)/3)]">
-            <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
-            <blockquote class="testimonial-copy mt-3 font-display text-sm leading-5 text-[#4f5e4d]">
-              “I want to thank you for the welcome, care, and attention, especially
-              because I did not understand much about the subject and did not know exactly what to expect. Carol was
-              attentive and thorough, and made me feel comfortable sharing my story in a safe space. I put my fears
-              aside, saw wonderful results from the first session, and now, in addition to sleeping better, my focus and
-              concentration have changed exponentially. I have only gratitude and wish you success.”
-            </blockquote>
-            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Nathálie A.</p>
-          </article>
+
+      <div data-embla class="embla relative mt-6" role="region" aria-roledescription="carousel"
+        aria-label="Client testimonials">
+        <div class="embla__viewport">
+          <div class="embla__container font-sans text-md">
+            <article class="embla__slide rounded-[2rem] bg-[#d6cdba] p-6" role="group" aria-roledescription="slide"
+              aria-label="1 of 5">
+              <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+              <blockquote class="testimonial-copy mt-3 leading-5 text-[#4f5e4d]">
+                “Carol is so authentic and very attentive to your needs and is very skilled at what she does. I've done
+                theta sessions with her and she has helped me at a deeper level. Very powerful work.”
+              </blockquote>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Veronika</p>
+            </article>
+            <article class="embla__slide rounded-[2rem] bg-[#d6cdba] p-6" role="group" aria-roledescription="slide"
+              aria-label="4 of 5">
+              <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+              <blockquote class="testimonial-copy mt-3 leading-5 text-[#4f5e4d]">
+                “Carol is someone who deeply understands what she does. Before the session, I felt tired, anxious, and
+                overwhelmed, and during the Reiki session with her I experienced something very intense. I am deeply
+                grateful for everything
+                I experienced and wholeheartedly recommend her work.”
+
+                <!--
+                I was able to
+                visualise many things, as if I were on a true inner journey. It was a unique experience of deep
+                connection and renewal. I left feeling lighter, at peace, and with renewed energy. I am sure that without the Reiki
+                I received with her, my healing process would have taken much longer.
+                -->
+              </blockquote>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Carla</p>
+            </article>
+            <article class="embla__slide rounded-[2rem] bg-[#d6cdba] p-6" role="group" aria-roledescription="slide"
+              aria-label="2 of 5">
+              <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+              <blockquote class="testimonial-copy mt-3 leading-5 text-[#4f5e4d]">
+                <!--I have been going through very challenging situations that caused me several symptoms and, above all,
+                great exhaustion, with a lot of difficulty regulating rest and recovery. -->
+                “During my session with Carol, I
+                still felt some resistance to surrendering to the process; however, after the session and in the
+                following
+                days, I have felt calmer and able to rest better. It has been helping my recovery. Thank you”
+              </blockquote>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Sandra D.</p>
+            </article>
+            <article class="embla__slide rounded-[2rem] bg-[#d6cdba] p-6" role="group" aria-roledescription="slide"
+              aria-label="3 of 5">
+              <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+              <blockquote class="testimonial-copy mt-3 leading-5 text-[#4f5e4d]">
+                “The experience was emotional. It was incredible to feel the energy flowing, the warmth in different
+                points, and the release of stress. The session released a lot of negativity that had built up and
+                brought
+                a wonderful feeling of peace and relief. Thank you, Carol.”
+              </blockquote>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Rachel K.</p>
+            </article>
+            <article class="embla__slide rounded-[2rem] bg-[#d6cdba] p-6" role="group" aria-roledescription="slide"
+              aria-label="4 of 5">
+              <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+              <blockquote class="testimonial-copy mt-3 leading-5 text-[#4f5e4d]">
+                “I was able to
+                visualise many things, as if I were on a true inner journey. It was a unique experience of deep
+                connection and renewal. I left feeling lighter, at peace, and with renewed energy. I am sure that
+                without the Reiki
+                I received with her, my healing process would have taken much longer."
+              </blockquote>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Carla</p>
+            </article>
+            <article class="embla__slide rounded-[2rem] bg-[#d6cdba] p-6" role="group" aria-roledescription="slide"
+              aria-label="5 of 5">
+              <p aria-label="5 out of 5 stars" class="text-sm tracking-[0.2em] text-[#c7a35e]">★★★★★</p>
+              <blockquote class="testimonial-copy mt-3 leading-5 text-[#4f5e4d]">
+                <!--I want to thank you for the welcome, care, and attention, especially
+                because I did not understand much about the subject and did not know exactly what to expect. -->
+                “Carol was attentive and thorough, and made me feel comfortable sharing my story in a safe space. I put
+                my fears
+                aside, saw wonderful results from the first session, and now, in addition to sleeping better, my focus
+                and
+                concentration have changed exponentially. I have only gratitude and wish you success.”
+              </blockquote>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#4f5e4d]">Nathálie A.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="discovery-call" class="min-h-screen mx-auto max-w-6xl px-6 py-20 sm:py-28">
-      <div class="relative overflow-hidden rounded-[3rem] bg-[#7e8d7a] px-6 py-16 text-center sm:px-12">
-        <div class="relative mx-auto max-w-2xl">
-          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#f4f1ea]">Ready when you are</p>
-          <h2 class="mt-4 font-header text-5xl font-semibold leading-tight text-[#f4f1ea]">Begin with a simple
-            conversation.</h2>
-          <p class="mx-auto mt-5 max-w-xl text-lg leading-8 text-[#f4f1ea]">
-            Book a free 30-minute discovery call where we can discuss if Moirai Atelier is right for you.
-          </p>
-          <a class="mt-8 inline-flex rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-10 py-5 text-xl font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2"
-            href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
-            target="_blank" rel="noopener noreferrer">
-            Book your free discovery call
-          </a>
-          <p class="mt-4 text-sm text-[#f4f1ea]">No obligation.</p>
-        </div>
-      </div>
+    <section id="discovery-call" class="relative min-h-screen overflow-hidden">
+      <figure class="absolute inset-0">
+        <img class="absolute inset-0 h-full w-full object-cover" src="assets/cta-background.webp"
+          alt="Placeholder image of burning incense for Moirai Atelier" />
+
+        <div class="absolute inset-0  bg-gradient-to-r from-[#f4f1ea]/90 to-[#f4f1ea]/95"></div>
+        <!--<div class="absolute inset-0 bg-gradient-to-r from-[#4f5e4d]/95 via-[#4f5e4d]/75 to-[#4f5e4d]/15"></div>-->
+        <figcaption
+          class=" relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center items-center px-6 pt-0 text-[#f4f1ea]">
+          <div class="max-w-3xl text-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#c7a35e]">Ready when you are</p>
+            <h2 class="mt-4 font-header text-5xl font-semibold leading-tight text-[#4f5e4d]">Begin with a simple
+              conversation.</h2>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-[#4f5e4d]">
+              Book a free 30-minute discovery call where we can discuss if Moirai Atelier is right for you.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center justify-center gap-5">
+              <a class="lg:w-fit w-full text-center rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-6 py-4 text-xl font-header font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+                href="mailto:carolmoura.business@gmail.com?subject=I%27m%20interested%20in%20a%20free%20discovery%20call&amp;body=Hi%2C%20I%27ve%20come%20across%20your%20website.%20I%27m%20interested%20in%20a%20free%20discovery%20call%20at%20your%20earliest%20convenience."
+                target="_blank" rel="noopener noreferrer">
+                Book a free discovery call
+              </a>
+              <a class="font-semibold hidden text-[#f4f1ea] underline decoration-[#c7a35e] underline-offset-4"
+                href="#sessions">
+                Explore the sessions
+              </a>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
     </section>
   </main>
 
-  <footer class="border-t border-[#c7a35e]/40 bg-[#4f5e4d] text-[#f4f1ea]">
+  <footer class="border-none border-[#c7a35e]/40 bg-[#4f5e4d] text-[#f4f1ea]">
     <div class="mx-auto max-w-6xl px-6 py-14">
       <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr] lg:gap-16">
         <div class="max-w-sm">
@@ -448,6 +518,7 @@
     </div>
   </footer>
   <script>
+
     const mobileMenu = document.querySelector("#mobile-menu");
     const mobileMenuToggle = document.querySelector("#mobile-menu-toggle");
 
@@ -487,67 +558,30 @@
       });
     }
 
-    document.querySelectorAll("[data-carousel-container]").forEach((container) => {
-      const rail = container.querySelector("[data-carousel]");
+    const emblaRoot = document.querySelector("[data-embla]");
 
-      container.querySelectorAll("[data-carousel-control]").forEach((control) => {
-        control.addEventListener("click", () => {
-          const direction = control.dataset.carouselControl === "next" ? 1 : -1;
-          rail.scrollBy({ left: rail.clientWidth * 0.9 * direction, behavior: "smooth" });
-        });
-      });
-    });
+    if (emblaRoot && typeof EmblaCarousel === "function") {
 
-    document.querySelectorAll("[data-autoplay-carousel]").forEach((container) => {
-      const rail = container.querySelector("[data-carousel]");
-      const cards = Array.from(rail.children);
+      const viewportNode = emblaRoot.querySelector(".embla__viewport");
+      const OPTIONS = { loop: true }
+      //const OPTIONS = { loop: true, duration: 30 }
+      const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [
+        EmblaCarouselAutoScroll({
+          speed: 0.5,
+          playOnInit: true,
+          stopOnInteraction: false,
+        })//EmblaCarouselFade()
+      ]);
 
-      if (cards.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      /*const FADE_DELAY = 5000;
+  
+  window.setInterval(() => {
+    emblaApi.scrollNext();
+  }, FADE_DELAY);*/
 
-      cards.forEach((card) => {
-        const duplicate = card.cloneNode(true);
-        duplicate.setAttribute("aria-hidden", "true");
-        rail.appendChild(duplicate);
-      });
+    }
 
-      const firstDuplicate = rail.children[cards.length];
-      let loopWidth = 0;
-      let isPaused = false;
 
-      const measureLoop = () => {
-        loopWidth = firstDuplicate.offsetLeft - cards[0].offsetLeft;
-      };
-
-      const pause = () => {
-        isPaused = true;
-      };
-
-      const resume = () => {
-        isPaused = false;
-      };
-
-      container.addEventListener("mouseenter", pause);
-      container.addEventListener("mouseleave", resume);
-      container.addEventListener("focusin", pause);
-      container.addEventListener("focusout", () => {
-        requestAnimationFrame(() => {
-          if (!container.contains(document.activeElement)) resume();
-        });
-      });
-      window.addEventListener("resize", measureLoop);
-
-      requestAnimationFrame(() => {
-        measureLoop();
-
-        window.setInterval(() => {
-          if (isPaused || !loopWidth) return;
-
-          rail.scrollLeft += 2;
-
-          if (rail.scrollLeft >= loopWidth) rail.scrollLeft -= loopWidth;
-        }, 80);
-      });
-    });
   </script>
 </body>
 
