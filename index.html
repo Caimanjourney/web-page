@@ -68,12 +68,62 @@
         flex-basis: calc((100% - 2.5rem) / 3);
       }
     }
+
+    #site-header {
+      height: 7rem;
+      transition: height 220ms ease, transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    #site-header .header-content {
+      height: 7rem;
+      transition: height 220ms ease, transform 220ms ease;
+    }
+
+    #site-header.is-scrolled {
+      height: 4.75rem;
+      background-color: #fff;
+      box-shadow: 0 1px 12px rgba(79, 94, 77, 0.12);
+    }
+
+    #site-header.is-scrolled .header-content {
+      height: 4.75rem;
+      transform: scale(0.92);
+    }
+
+    #site-header.is-hidden {
+      transform: translateY(-100%);
+    }
+
+    #site-header.is-scrolled .header-brand,
+    #site-header.is-scrolled .primary-navigation,
+    #site-header.is-scrolled .primary-navigation ul,
+    #site-header.is-scrolled .header-social-link,
+    #site-header.is-scrolled #mobile-menu-toggle {
+      color: #4f5e4d;
+    }
+
+    #site-header.is-scrolled .header-social-link,
+    #site-header.is-scrolled #mobile-menu-toggle {
+      border-color: rgba(79, 94, 77, 0.45);
+    }
+
+    #site-header.is-scrolled .header-divider {
+      background-color: rgba(79, 94, 77, 0.3);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #site-header,
+      #site-header .header-content {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
 <body class="bg-[#f4f1ea] font-sans text-[#4f5e4d]">
-  <header class="absolute inset-x-0 top-0 z-30 mx-auto flex max-w-6xl items-center px-6 py-5 lg:py-8 h-28">
-    <a class="text-[#f4f1ea] font-display text-3xl font-semibold tracking-tight " href="#top">Moirai</a>
+  <header id="site-header" class="fixed inset-x-0 top-0 z-30">
+    <div class="header-content mx-auto flex max-w-6xl items-center px-6">
+    <a class="header-brand text-[#f4f1ea] font-display text-3xl font-semibold tracking-tight transition-colors" href="#top">Moirai</a>
     <button id="mobile-menu-toggle" type="button"
       class="ml-auto inline-flex size-11 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d] lg:hidden"
       aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
@@ -86,7 +136,7 @@
         <path d="m6 6 12 12M18 6 6 18"></path>
       </svg>
     </button>
-    <nav aria-label="Primary navigation" class="hidden lg:absolute lg:left-1/2 lg:block lg:w-auto lg:-translate-x-1/2">
+    <nav aria-label="Primary navigation" class="primary-navigation hidden lg:absolute lg:left-1/2 lg:block lg:w-auto lg:-translate-x-1/2">
       <ul class="flex justify-center gap-5 text-base font-semibold uppercase tracking-[0.14em] text-[#f4f1ea]">
         <li><a class="transition hover:text-[#c7a35e]" href="#about">About</a></li>
         <li><a class="transition hover:text-[#c7a35e]" href="#sessions">Sessions</a></li>
@@ -97,7 +147,7 @@
       <ul aria-label="Social links" class="flex items-center gap-2">
         <li>
           <a aria-label="Follow Moirai  on Instagram"
-            class="inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+            class="header-social-link inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
             href="https://www.instagram.com/moirai." target="_blank" rel="noopener noreferrer">
             <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round"
               stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
@@ -109,7 +159,7 @@
         </li>
         <li>
           <a aria-label="Follow Moirai  on TikTok"
-            class="inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
+            class="header-social-link inline-flex size-9 items-center justify-center rounded-full border border-[#f4f1ea]/60 text-[#f4f1ea] transition hover:border-[#c7a35e] hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2 focus:ring-offset-[#4f5e4d]"
             href="https://www.tiktok.com/@moirai." target="_blank" rel="noopener noreferrer">
             <svg aria-hidden="true" class="size-4" fill="none" stroke="currentColor" stroke-linecap="round"
               stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
@@ -119,12 +169,13 @@
           </a>
         </li>
       </ul>
-      <span aria-hidden="true" class="hidden h-7 w-px bg-[#f4f1ea]/40 sm:block"></span>
+      <span aria-hidden="true" class="header-divider hidden h-7 w-px bg-[#f4f1ea]/40 sm:block"></span>
       <a class="hidden rounded-full border border-[#c7a35e] bg-[#4f5e4d] px-6 py-3 text-base font-semibold text-[#f4f1ea] transition hover:bg-[#c7a35e] hover:text-[#4f5e4d] focus:outline-none focus:ring-2 focus:ring-[#c7a35e] focus:ring-offset-2"
         href="https://calendly.com/moirailife/session" target="_blank" rel="noopener noreferrer">
         Book a session
       </a>
       <session-call-button></session-call-button>
+    </div>
     </div>
   </header>
 
@@ -550,6 +601,40 @@
 
   </script>
   <script>
+
+    const siteHeader = document.querySelector("#site-header");
+
+    if (siteHeader) {
+      let previousScrollPosition = window.scrollY;
+      let scrollDistance = 0;
+      const scrollThreshold = 8;
+
+      const updateHeader = () => {
+        const currentScrollPosition = window.scrollY;
+        const scrollChange = currentScrollPosition - previousScrollPosition;
+
+        if (currentScrollPosition <= 8) {
+          siteHeader.classList.remove("is-scrolled", "is-hidden");
+          scrollDistance = 0;
+        } else {
+          siteHeader.classList.add("is-scrolled");
+          scrollDistance += scrollChange;
+
+          if (scrollDistance >= scrollThreshold) {
+            siteHeader.classList.add("is-hidden");
+            scrollDistance = 0;
+          } else if (scrollDistance <= -scrollThreshold) {
+            siteHeader.classList.remove("is-hidden");
+            scrollDistance = 0;
+          }
+        }
+
+        previousScrollPosition = currentScrollPosition;
+      };
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+    }
 
     const mobileMenu = document.querySelector("#mobile-menu");
     const mobileMenuToggle = document.querySelector("#mobile-menu-toggle");
